@@ -18,6 +18,7 @@ const SelectDate = () => {
 
   return (
     <>
+      <DatePicker/>
       <Alert message={`You selected date: ${selectedValue?.format('YYYY-MM-DD')}`} />
       <Calendar value={value} onSelect={onSelect} onPanelChange={onPanelChange} />
     </>

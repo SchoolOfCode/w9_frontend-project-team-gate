@@ -7,17 +7,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <BrowserRouter component={<Sidebar />}>
+    <div> 
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PageOne />}  />
+          <Route path="/" element={<PageOne />} />
           <Route path="/PageTwo" element={<PageTwo />} />
           <Route path="/PageThree" element={<PageThree />} />
         </Routes>
       </BrowserRouter>
-      
+      <div>
+      <Sidebar/>
+      </div>
     </div>
-  
   );
 }
 
