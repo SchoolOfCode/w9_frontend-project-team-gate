@@ -4,6 +4,8 @@ import PageOne from "../PageOne/PageOne.js";
 import PageTwo from "../PageTwo/PageTwo.js";
 import PageThree from "../PageThree/PageThree.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import 'antd/dist/antd.less' 
+
 
 function App() {
   return (
