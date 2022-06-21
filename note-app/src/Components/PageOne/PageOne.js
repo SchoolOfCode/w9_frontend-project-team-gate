@@ -1,15 +1,16 @@
-import {Link} from "react-router-dom"
+import Title from "./Title/Title";
+import SelectDate from "../Sidebar/SelectDate/SelectDate.js";
+import SearchBar from "../Sidebar/SearchBar/SearchBar";
+import MusicGenerator from "../Sidebar/MusicGenerator/MusicGenerator";
 
 export default function PageOne() {
+  
   return (
     <div>
-      <h1>Geta Note</h1>;
-      <h3>Select a date or topic and share your notes</h3>;
-      <Link to="/page2">
-      <button>Hello</button>
-      </Link>
+      <Title />
+      <SelectDate />
+      <SearchBar /> 
+      <MusicGenerator />
     </div>
-
-
   );
 }
