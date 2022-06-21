@@ -1,10 +1,19 @@
-import './App.css';
+import "./App.css";
+import PageOne from "../PageOne/PageOne.js";
+import PageTwo from "../PageTwo/PageTwo.js";
+import PageThree from "../PageThree/PageThree.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <h1>Geta Note</h1>
-      <h3>Select a date or topic and share your notes</h3>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PageOne />} />
+          <Route path="/PageTwo" element={<PageTwo />} />
+          <Route path="/PageThree" element={<PageThree />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
