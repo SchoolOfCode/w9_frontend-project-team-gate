@@ -18,11 +18,11 @@ const SelectDate = () => {
   };
 
   return (
-    <>
+    <div className={Style.SelectDate}>
       <DatePicker/>
       <Alert message={`${selectedValue?.format('YYYY-MM-DD')}`} />
       <Calendar class={Style.Calendar} value={value} onSelect={onSelect} onPanelChange={onPanelChange} />
-    </>
+    </div>
   );
 };
 
