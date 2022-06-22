@@ -1,16 +1,14 @@
-import { Calendar } from 'antd';
-import Style from "./SelectDate.module.css";
+const SelectDate = (props) => {
 
-const SelectDate = () => {
-  const onPanelChange = (value, mode) => {
-    console.log(value.format('YYYY-MM-DD'), mode);
-  };
-  return (
-    <div className={Style.SelectDate}>
-      <Calendar fullscreen={false} onPanelChange={onPanelChange} />
-    </div>
-  );
-};
+    return (
+      <div>
+        <form>
+          <input type="text" placeholder="DD-MM-YYYY" onChange= {(e) => props.handleChange(e)} value = {props.text} />
+          <button onClick={props.getDate}>Submit</button>
+        </form>
+      </div>
+    );
+  }
 export default SelectDate;
 
 

@@ -21,12 +21,20 @@ export default function Sidebar (){
         console.log(searchResults);
         navigate('/PageTwo/', {state: searchResults.payload})
       }
+    
+      async function getSearchedDate(e) {
+        e.preventDefault();
+        let searchedDate = await fetch(`http://localhost:3000/notes/date/${text}`);
+        let searchResults = await searchedDate.json();
+        //console.log(searchResults);
+        navigate('/PageThree/', {state: searchResults.payload})
+      }
 
     return (
         <div>
             <MusicGenerator />
             <SearchBar handleChange={handleChange} getAllTopics={getSearchedTopics} text={text}/>
-            <SelectDate />
+            <SelectDate handleChange={handleChange} getDate={getSearchedDate} text={text}/> 
         </div>
     )
 }
