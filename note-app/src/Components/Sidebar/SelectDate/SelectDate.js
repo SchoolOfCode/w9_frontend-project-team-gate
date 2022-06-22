@@ -1,35 +1,17 @@
-import { DatePicker } from 'antd';
-import { Alert, Calendar } from 'antd';
-import moment from 'moment';
-import { useState } from 'react';
+import { Calendar } from 'antd';
 import Style from "./SelectDate.module.css";
 
 const SelectDate = () => {
-  const [value, setValue] = useState(moment('2022-04-25'));
-  const [selectedValue, setSelectedValue] = useState(moment('2022-08-13'));
-
-  const onSelect = (newValue) => {
-    setValue(newValue);
-    setSelectedValue(newValue);
+  const onPanelChange = (value, mode) => {
+    console.log(value.format('YYYY-MM-DD'), mode);
   };
-
-  const onPanelChange = (newValue) => {
-    setValue(newValue);
-  };
-
   return (
     <div className={Style.SelectDate}>
-      <DatePicker/>
-      <Alert message={`${selectedValue?.format('YYYY-MM-DD')}`} />
-      <Calendar class={Style.Calendar} value={value} onSelect={onSelect} onPanelChange={onPanelChange} />
+      <Calendar fullscreen={false} onPanelChange={onPanelChange} />
     </div>
   );
 };
-
-
-
-
-
-
 export default SelectDate;
+
+
 
