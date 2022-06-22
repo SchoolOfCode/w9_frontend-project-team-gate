@@ -5,7 +5,7 @@ const { TextArea } = Input;
 export default function NotesInput(props) {
   return (
     <div className={Style.NotesInput}>
-      <TextArea rows={50} placeholder="Enter Text Here..." maxLength={50} onChange={(e) => {props.textChange(e)}}/>
+      <TextArea rows={40} placeholder="Enter Text Here..." maxLength={50} onChange={(e) => {props.textChange(e)}}/>
     </div>
   );
 }

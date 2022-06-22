@@ -3,16 +3,15 @@ import NotesInput from "./NotesInput/NotesInput";
 import TopicInput from "./TopicInput/TopicInput";
 import Style from "./PageThree";
 import AddNotesButton from "./AddNotesButton/AddNotesButton";
-import { useLocation } from "react-router-dom";
-import Note from "../PageTwo/Note/Note.js";
 import React, { useState } from "react";
 
 export default function PageThree(props) {
-  const location = useLocation();
-  const data = location.state;
+ 
+
   const [text, setText] = useState("");
   const [topic, setTopic] = useState("");
   //console.log(data);
+
   function postNote(){
     const requestOptions = {
       method: "POST",
@@ -45,7 +44,7 @@ export default function PageThree(props) {
       <Title />
         <TopicInput topicChange={topicChange} />
         <NotesInput textChange={textChange} />
-      <AddNotesButton postNote={postNote} />
+        <AddNotesButton postNote={postNote} />
     </div>
   );
 } 
