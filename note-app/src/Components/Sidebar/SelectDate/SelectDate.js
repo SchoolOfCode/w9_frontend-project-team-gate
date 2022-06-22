@@ -1,17 +1,36 @@
-import { Calendar } from 'antd';
 import Style from "./SelectDate.module.css";
+import { DatePicker, Space } from 'antd';
 
-const SelectDate = () => {
-  const onPanelChange = (value, mode) => {
-    console.log(value.format('YYYY-MM-DD'), mode);
-  };
-  return (
-    <div className={Style.SelectDate}>
-      <Calendar fullscreen={false} onPanelChange={onPanelChange} />
-    </div>
-  );
+const onChange = (date, dateString) => {
+  console.log(date, dateString);
 };
+
+const SelectDate = () => (
+  <Space direction="vertical">
+    <DatePicker onChange={onChange} />
+    {/* <DatePicker onChange={onChange} picker="week" /> */}
+    {/* <DatePicker onChange={onChange} picker="month" />
+    <DatePicker onChange={onChange} picker="quarter" />
+    <DatePicker onChange={onChange} picker="year" /> */}
+  </Space>
+);
+
 export default SelectDate;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
