@@ -10,7 +10,7 @@ import Sidebar from "../Sidebar/Sidebar";
 function App() {
   return (
     <div> 
-          <Routes >
+          <Routes>
             <Route path="/PageOne" element={<PageOne />} />
             <Route path="/PageTwo" element={<PageTwo />} />
             <Route path="/PageThree" element={<PageThree />} />
