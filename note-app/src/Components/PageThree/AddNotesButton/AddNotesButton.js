@@ -3,7 +3,6 @@ import { Button } from 'antd';
 
 export default function AddNotesButton (){
     function handleClick(){
-        alert("Notes Added");
 
     }
     return (

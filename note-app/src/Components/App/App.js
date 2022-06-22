@@ -4,6 +4,7 @@ import PageTwo from "../PageTwo/PageTwo.js";
 import PageThree from "../PageThree/PageThree.js";
 import { Routes, Route } from "react-router-dom";
 import 'antd/dist/antd.less' 
+import Sidebar from "../Sidebar/Sidebar";
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="/PageThree" element={<PageThree />} />
           </Routes>
       <div>
+      <Sidebar/>
       </div>
     </div>
   );
