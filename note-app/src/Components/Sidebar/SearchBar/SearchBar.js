@@ -1,7 +1,5 @@
-import { useNavigate } from "react-router-dom";
-
-export default function SearchBar() {
-  let navigate = useNavigate();
+import React from "react";
+export default function SearchBar(props) {
 
   // async function submitSearch(e) {
   //   // get the text from event and put in var
@@ -9,18 +7,11 @@ export default function SearchBar() {
   //   // call the back end route with the text and get response
   //   // let result = fetch(`localhost:3000/topics/$topic`)
   //   // useNavigate('/pageTwo/', result)
-  
-  
   //   // let searchTerm = e.
   //   // let notes = await fetch(`http://localhost:3000/notes/${searchTerm}`)
-  async function getAllTopics(e) {
-    e.preventDefault();
-    let allTopics = await fetch("http://localhost:3000/notes/");
-    let allTopicJsonData = await allTopics.json();
-    console.log();
-    navigate('/PageTwo/', {state: allTopicJsonData.data})
-    // console.log(notes.data);
-  }
+
+
+
 
   // async function searchByTopics(e) {
   //   e.preventDefault();
@@ -32,10 +23,9 @@ export default function SearchBar() {
   return (
     <div>
       <form>
-        <input type="text" placeholder="Search by Topic" />
-        <button onClick={getAllTopics}>Submit</button>
+        <input type="text" placeholder="Search by Topic" onChange= {(e) => props.handleChange(e)} value = {props.text} />
+        <button onClick={props.getAllTopics}>Submit</button>
       </form>
     </div>
   );
-}
-
+}//onClick={getAllTopics}

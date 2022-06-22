@@ -13,6 +13,7 @@ export default function PageTwo() {
     
     <div className={Style.PageTwo}>
       <Title />
+      {data[0].topics}
       {data.map((note) => (
        <Note key={note.id} date={note.date} notes={note.notes} topics={note.topics}></Note>
       ))}
