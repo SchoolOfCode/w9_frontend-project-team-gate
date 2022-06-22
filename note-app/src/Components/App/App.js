@@ -1,5 +1,4 @@
 import "./App.css";
-import Sidebar from "../Sidebar/Sidebar.js"
 import PageOne from "../PageOne/PageOne.js";
 import PageTwo from "../PageTwo/PageTwo.js";
 import PageThree from "../PageThree/PageThree.js";
@@ -16,7 +15,6 @@ function App() {
             <Route path="/PageThree" element={<PageThree />} />
           </Routes>
       <div>
-      <Sidebar/>
       </div>
     </div>
   );
