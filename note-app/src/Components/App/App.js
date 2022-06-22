@@ -11,7 +11,6 @@ function App() {
   return (
     <div> 
           <Routes >
-            <Route path="/" element={<PageOne />} />
             <Route path="/PageOne" element={<PageOne />} />
             <Route path="/PageTwo" element={<PageTwo />} />
             <Route path="/PageThree" element={<PageThree />} />

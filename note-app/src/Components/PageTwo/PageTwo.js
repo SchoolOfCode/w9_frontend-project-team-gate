@@ -1,6 +1,6 @@
 import Title from "./Title/Title";
 import Note from "./Note/Note";
-import { useLocation } from "react-router-dom";
+import { useLocation, BrowserRouter, Route, Switch } from "react-router-dom";
 import Style from "./PageTwo.module.css"
 
 export default function PageTwo() {
@@ -13,10 +13,21 @@ export default function PageTwo() {
     
     <div className={Style.PageTwo}>
       <Title />
+      <nav>
+        <ul>
+          <li><a href="/PageThree">{Note}</a></li>
+        </ul>
+      </nav>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/PageThree">
       {data[0].topics}
       {data.map((note) => (
        <Note key={note.id} date={note.date} notes={note.notes} topics={note.topics}></Note>
       ))}
+      </Route>
+        </Switch>
+      </BrowserRouter>
       ;
     </div>
   );
