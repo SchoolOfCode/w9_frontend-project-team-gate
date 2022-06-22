@@ -1,6 +1,7 @@
 import MusicGenerator from "./MusicGenerator/MusicGenerator";
 import SearchBar from "./SearchBar/SearchBar";
 import SelectDate from "./SelectDate/SelectDate";
+import AllNotes from "./AllNotes/AllNotes";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +28,14 @@ export default function Sidebar (){
         let searchedDate = await fetch(`http://localhost:3000/notes/date/${text}`);
         let searchResults = await searchedDate.json();
         //console.log(searchResults);
-        navigate('/PageThree/', {state: searchResults.payload})
+        navigate('/PageTwo/', {state: searchResults.payload})
+      }
+      async function getAllTopics(e) {
+        e.preventDefault();
+        let allTopics = await fetch("http://localhost:3000/notes/");
+        let allTopicJsonData = await allTopics.json();
+        console.log();
+        navigate('/PageTwo/', {state: allTopicJsonData.data})
       }
 
     return (
@@ -35,6 +43,7 @@ export default function Sidebar (){
             <MusicGenerator />
             <SearchBar handleChange={handleChange} getAllTopics={getSearchedTopics} text={text}/>
             <SelectDate handleChange={handleChange} getDate={getSearchedDate} text={text}/> 
+            <AllNotes getAllTopics={getAllTopics}  />
         </div>
     )
 }
