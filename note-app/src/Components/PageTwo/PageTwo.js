@@ -1,6 +1,7 @@
 import Title from "./Title/Title";
 import Note from "./Note/Note";
 import { useLocation } from "react-router-dom";
+import Style from "./PageTwo.module.css"
 
 export default function PageTwo() {
   const location = useLocation();
@@ -9,7 +10,8 @@ export default function PageTwo() {
   console.log(data);
 
   return (
-    <div>
+    
+    <div className={Style.PageTwo}>
       <Title />
       {data[0].topics}
       {data.map((note) => (

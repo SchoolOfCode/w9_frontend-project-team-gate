@@ -1,8 +1,9 @@
+import Style from "./Title.module.css";
+
 export default function Title () {
     return (
-        <div>
+        <div className={Style.Title}>
             <h1>Geta Note</h1>
-            <h3>Select a date or topic and share your notes</h3>
         </div>
     )    
 };
