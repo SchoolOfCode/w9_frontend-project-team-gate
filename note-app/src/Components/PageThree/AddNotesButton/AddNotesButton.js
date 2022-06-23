@@ -1,5 +1,4 @@
 import Style from "./AddNotesButton.module.css"
-import { Button } from "@nextui-org/react";
 import {useState} from 'react'
 
 
@@ -15,7 +14,7 @@ const [newInput, setNewInput] = useState("")
     
     return (
         <form className={Style.AddNotesButtonPosition}>
-            <Button className={Style.AddNotesButton} auto color="warning" value="submit" onClick={(e) =>handleClick(e)}>Submit Notes</Button>
+            <button className={Style.AddNotesButton} onClick={(e) =>handleClick(e)}>Submit Notes</button>
         </form>
     )
 

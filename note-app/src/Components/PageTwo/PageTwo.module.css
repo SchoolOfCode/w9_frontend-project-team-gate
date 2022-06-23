@@ -5,12 +5,12 @@
 }
 
 .SearchResults{
-    width: 1200px;
+    width: 93%;
     border: 15px solid;
     padding: 10px;
     margin: 10px;
-    margin-top: 40px; 
-    margin-bottom: 3px;   
+    margin-bottom: 40px; 
+    margin-top: 3px;   
     display: flex;
     justify-content: left;
     align-items: center;
@@ -27,6 +27,7 @@
     margin-left: 25px;
     border-radius: 5px;
     padding: 5px;
+    font-weight: bold;
     background-color: #efb87e;
     color: #023047;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
