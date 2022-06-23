@@ -7,7 +7,7 @@ const { TextArea } = Input;
 
 
 
-export default function NotesInput({onInput}) {
+export default function NotesInput({onInput,value}) {
   /*const [input, setInput] = useState("");
 
   function handleChange(e){
@@ -17,7 +17,7 @@ export default function NotesInput({onInput}) {
   
   return (
     <div className={Style.NotesInputPosition}>
-      <TextArea className={Style.NotesInput} rows={50} placeholder="Enter Text Here..." maxLength={50} onChange= {onInput} />
+      <TextArea type="text" className={Style.NotesInput} /*rows={50}*/ maxLength={50} onChange= {onInput}/>
     </div>
   );
 }

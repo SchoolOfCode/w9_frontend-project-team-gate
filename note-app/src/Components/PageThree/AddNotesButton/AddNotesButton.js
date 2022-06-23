@@ -11,6 +11,8 @@ const [newInput, setNewInput] = useState("")
         setNewInput({input})
         console.log(newInput)
     }
+
+    
     return (
         <form className={Style.AddNotesButtonPosition}>
             <Button className={Style.AddNotesButton} auto color="warning" value="submit" onClick={(e) =>handleClick(e)}>Submit Notes</Button>

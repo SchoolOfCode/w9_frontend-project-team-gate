@@ -18,15 +18,20 @@ export default function PageThree(props) {
     console.log(input);
   }
 
+  
+
   return (
     <div className={Style.PageThree}>
       <Title />
       {data && data.map((note) => (
+        <div>
        <Note key={note.id} date={note.date} topics={note.topics} notes={note.notes}></Note>
+       <AddNotesButton input={input}/>
+      <NotesInput onInput= {handleChange} value={note.notes} />
+      </div>
       ))}
       {data && data.map((note) => {})}
-      <AddNotesButton input={input}/>
-      <NotesInput onInput= {handleChange} />
+      
     </div>
   );
 
