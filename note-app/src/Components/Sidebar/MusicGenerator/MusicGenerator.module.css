@@ -4,10 +4,13 @@
     align-items: center;
     flex-direction: column;
     padding-bottom: 3px;
-    color: #faf4d3;
+    color: white;
    
 }
 
 .ReactAudioPlayer {
-    background-color: #faf4d3;
+    background-color: white;
+    border-radius: 5px;
+    height: 0.6cm;
+    width: 6.1cm;
 }

@@ -1,17 +1,22 @@
-.AddNotesButtonPosition {
+/* .AddNotesButtonPosition {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 5em;
-    width: 3cm
 
     
-}
+} */
 
 .AddNotesButton {
+    justify-content: left;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 4cm;
-    padding-left: 5em;
+    align-items: flex-end;
+    margin-left: 64px;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #efb87e;
+    color: #023047;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

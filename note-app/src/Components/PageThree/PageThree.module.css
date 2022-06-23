@@ -1,5 +1,16 @@
-/* .PageThree{
-display: flex;
-justify-content: center;
-align-items: center;
-} */
+.NoteDisplay{
+    width: 88.5vw;
+    border: 15px solid;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 53px;
+    margin-bottom: 40px; 
+    margin-top: 10px;   
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 12px;
+    color: #023047;
+    background-color: #faf4d3;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }

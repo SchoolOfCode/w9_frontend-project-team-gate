@@ -23,8 +23,10 @@ export default function PageTwo() {
       <Title />
       {data && data.map((note) => (
         <nav>
-       <button onClick={()=> newDate(note.date)}>Click here to edit {note.date}</button>
+        <button className={Style.ResultButton} onClick={()=> newDate(note.date)}>Click here to edit {note.date}</button>
+       <div className={Style.SearchResults}>
        <Note key={note.id} date={note.date} notes={note.notes} topics={note.topics}></Note>
+       </div>
        </nav>
       ))}
       ;
