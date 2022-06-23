@@ -1,5 +1,13 @@
-.Calendar {
+.SelectDate {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+   
+}
+
+.button {
+    background-color: #faf4d3;
+    color: #023047;
+    
 }

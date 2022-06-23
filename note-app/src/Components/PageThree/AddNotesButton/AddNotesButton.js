@@ -1,13 +1,14 @@
 import Style from "./AddNotesButton.module.css"
-import { Button } from 'antd';
+import { Button } from "@nextui-org/react";
+
 
 export default function AddNotesButton (){
     function handleClick(){
 
     }
     return (
-        <form className={Style.AddNotesButton}>
-            <Button type="primary" shape="round" value="submit" onClick={handleClick}>Submit Notes</Button>
+        <form className={Style.AddNotesButtonPosition}>
+            <Button className={Style.AddNotesButton} auto color="warning" value="submit" onClick={handleClick}>Submit Notes</Button>
         </form>
     )
 
