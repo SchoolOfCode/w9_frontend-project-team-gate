@@ -5,11 +5,18 @@ import AddNotesButton from "./AddNotesButton/AddNotesButton"
 import { useLocation } from "react-router-dom";
 import Note from "../PageTwo/Note/Note.js";
 import React from "react";
+import { useState } from "react";
 
 export default function PageThree(props) {
   const location = useLocation();
   const data = location.state;
   //console.log(data);
+  const [input, setInput] = useState("");
+
+  function handleChange(e){
+    setInput(e.target.value);
+    console.log(input);
+  }
 
   return (
     <div className={Style.PageThree}>
@@ -18,9 +25,9 @@ export default function PageThree(props) {
        <Note key={note.id} date={note.date} topics={note.topics} notes={note.notes}></Note>
       ))}
       {data && data.map((note) => {})}
-      <AddNotesButton />
-      <NotesInput />
+      <AddNotesButton input={input}/>
+      <NotesInput onInput= {handleChange} />
     </div>
   );
-}
 
+      }
