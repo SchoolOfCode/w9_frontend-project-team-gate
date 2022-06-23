@@ -35,17 +35,13 @@ export default function PageThree(props) {
       {data && data.map((note) => (
         <div>
        <Note key={note.id} date={note.date} topics={note.topics} notes={note.notes}></Note>
-       <AddNotesButton input={input}/>
-      <NotesInput onInput= {handleChange} value={note.notes} />
+       <AddNotesButton input={input} currentNote={note}/>
+      <NotesInput onInput={handleChange} value={note.notes} />
       </div>
       ))}
 
       {data && data.map((note) => {})}
       
-
-      
-      <AddNotesButton />
-      <NotesInput />
 
     </div>
   );

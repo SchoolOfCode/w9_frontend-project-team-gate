@@ -17,7 +17,7 @@ export default function NotesInput({onInput,value}) {
   
   return (
     <div className={Style.NotesInputPosition}>
-      <TextArea type="text" className={Style.NotesInput} /*rows={50}*/ maxLength={50} onChange= {onInput}/>
+      <TextArea type="text" className={Style.NotesInput} rows={50} maxLength={50} onChange= {onInput}/>
     </div>
   );
 }

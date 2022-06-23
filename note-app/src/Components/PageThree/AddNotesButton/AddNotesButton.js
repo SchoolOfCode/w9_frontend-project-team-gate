@@ -4,13 +4,17 @@ import {useState} from 'react'
 
 
 
-export default function AddNotesButton ({input}){
+export default function AddNotesButton ({input, currentNote}){
 const [newInput, setNewInput] = useState("")
+// const currentNote = currentNote.note
+console.log(currentNote.notes)
+
 
     function handleClick(){
         setNewInput({input})
         console.log(newInput)
     }
+    
 
     
     return (
