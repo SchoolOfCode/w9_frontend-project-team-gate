@@ -10,6 +10,7 @@ import { useState } from "react";
 export default function PageThree(props) {
   const location = useLocation();
   const data = location.state;
+  //let navigate = useNavigate();
   //console.log(data);
   const [input, setInput] = useState("");
 
@@ -19,6 +20,14 @@ export default function PageThree(props) {
   }
 
   
+
+  // async function newDate(e) {
+  //   e.preventDefault();
+  //   let searchedDate = await fetch(`http://localhost:3000/notes/date/${text}`);
+  //   let searchResults = await searchedDate.json();
+  //   //console.log(searchResults);
+  //   navigate('/PageThree/', {state: searchResults.payload})
+  // }
 
   return (
     <div className={Style.PageThree}>
@@ -30,8 +39,14 @@ export default function PageThree(props) {
       <NotesInput onInput= {handleChange} value={note.notes} />
       </div>
       ))}
+
       {data && data.map((note) => {})}
       
+
+      
+      <AddNotesButton />
+      <NotesInput />
+
     </div>
   );
 
