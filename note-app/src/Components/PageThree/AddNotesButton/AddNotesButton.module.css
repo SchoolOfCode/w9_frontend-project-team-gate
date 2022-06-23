@@ -1,8 +1,17 @@
-.Title {
+.AddNotesButtonPosition {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: underline;
-    padding-top: 2cm
+    padding-left: 5em;
+    width: 3cm
+
     
+}
+
+.AddNotesButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4cm;
+    padding-left: 5em;
 }

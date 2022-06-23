@@ -1,0 +1,14 @@
+.SearchBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 3px;
+    
+}
+
+.Button {
+    background-color: #faf4d3;
+    color: #023047;
+    
+}

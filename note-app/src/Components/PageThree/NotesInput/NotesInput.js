@@ -4,8 +4,8 @@ const { TextArea } = Input;
 
 export default function NotesInput() {
   return (
-    <div className={Style.NotesInput}>
-      <TextArea rows={50} placeholder="Enter Text Here..." maxLength={50} />
+    <div className={Style.NotesInputPosition}>
+      <TextArea className={Style.NotesInput} rows={50} placeholder="Enter Text Here..." maxLength={50} />
     </div>
   );
 }

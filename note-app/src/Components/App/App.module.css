@@ -1,0 +1,14 @@
+.SidebarLayout {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    width: 100vw;
+    
+}
+
+.Sidebar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}

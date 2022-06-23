@@ -1,6 +1,6 @@
 import Title from "./Title/Title";
 import NotesInput from "./NotesInput/NotesInput";
-import Style from "./PageThree"
+import Style from "./PageThree.module.css"
 import AddNotesButton from "./AddNotesButton/AddNotesButton"
 import { useLocation } from "react-router-dom";
 import Note from "../PageTwo/Note/Note.js";
@@ -14,13 +14,12 @@ export default function PageThree(props) {
   return (
     <div className={Style.PageThree}>
       <Title />
-      {data.map((note) => (
+      {data && data.map((note) => (
        <Note key={note.id} date={note.date} topics={note.topics} notes={note.notes}></Note>
       ))}
-      {data.map((note) => (
-      <NotesInput />
-      ))}
+      {data && data.map((note) => {})}
       <AddNotesButton />
+      <NotesInput />
     </div>
   );
 }
