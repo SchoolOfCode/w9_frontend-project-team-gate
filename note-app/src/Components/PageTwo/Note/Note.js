@@ -1,7 +1,10 @@
+import { Navigate } from 'react-router-dom';
+
+
 export default function Note(props) {
     return (
-      <div>
-      
+    
+      <div onClick = {() => <Navigate to = {`/PageTwo/${props.id}`}/> } >
           <h2>{props.topics}</h2>
           <p>{props.date}</p>
           <p>{props.notes}</p>
@@ -22,3 +25,5 @@ export default function Note(props) {
     
 //   </div>
 // );
+
+
