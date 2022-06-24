@@ -1,25 +1,18 @@
 import Title from "./Title/Title";
-import NotesInput from "./NotesInput/NotesInput";
-import Style from "./PageThree.module.css"
-import AddNotesButton from "./AddNotesButton/AddNotesButton"
+import NotesInput from "./AddNoteForm/NotesInput/NotesInput";
+import Style from "./PageThree.module.css";
+import AddNotesButton from "./AddNoteForm/AddNotesButton/AddNotesButton";
 import { useLocation } from "react-router-dom";
 import Note from "../PageTwo/Note/Note.js";
 import React from "react";
 import { useState } from "react";
+import AddNoteForm from "./AddNoteForm/AddNoteForm";
 
 export default function PageThree(props) {
   const location = useLocation();
   const data = location.state;
   //let navigate = useNavigate();
   //console.log(data);
-  const [input, setInput] = useState("");
-
-  function handleChange(e){
-    setInput(e.target.value);
-    console.log(input);
-  }
-
-  
 
   // async function newDate(e) {
   //   e.preventDefault();
@@ -32,15 +25,20 @@ export default function PageThree(props) {
   return (
     <div className={Style.PageThree}>
       <Title />
-      {data && data.map((note) => (
-        <div>
-        <div className={Style.NoteDisplay}>
-       <Note key={note.id} date={note.date} topics={note.topics} notes={note.notes}></Note>
-       </div>
-       <AddNotesButton input={input}/>
-      <NotesInput onInput= {handleChange} value={note.notes} />
-      </div>
-      ))}
+      {data &&
+        data.map((note) => (
+          <div>
+            <div className={Style.NoteDisplay}>
+              <Note
+                key={note.id}
+                date={note.date}
+                topics={note.topics}
+                notes={note.notes}
+              ></Note>
+            </div>
+            <AddNoteForm />
+          </div>
+        ))}
     </div>
   );
-      }
+}

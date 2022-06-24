@@ -7,10 +7,16 @@ import { useNavigate } from "react-router-dom";
 export default function Sidebar (){
 
     const [text, setText] = useState("");
+    const [date, setDate] = useState("");
     let navigate = useNavigate();
 
-    function handleChange(event){
+    function handleChangeTopic(event){
       setText(event.target.value);
+      console.log(text);
+    }
+
+    function handleChangeDate(event){
+      setDate(event.target.value);
       console.log(text);
     }
 
@@ -20,21 +26,23 @@ export default function Sidebar (){
         let searchResults = await searchedTopics.json();
         console.log(searchResults);
         navigate('/PageTwo/', {state: searchResults.payload})
+        setText('');
       }
     
       async function getSearchedDate(e) {
         e.preventDefault();
-        let searchedDate = await fetch(`http://localhost:3000/notes/date/${text}`);
+        let searchedDate = await fetch(`http://localhost:3000/notes/date/${date}`);
         let searchResults = await searchedDate.json();
         //console.log(searchResults);
         navigate('/PageThree/', {state: searchResults.payload})
+        setDate('');
       }
 
     return (
         <div>
             <MusicGenerator />
-            <SearchBar handleChange={handleChange} getAllTopics={getSearchedTopics} text={text}/>
-            <SelectDate handleChange={handleChange} getDate={getSearchedDate} text={text}/> 
+            <SearchBar handleChange={handleChangeTopic} getAllTopics={getSearchedTopics} text={text}/>
+            <SelectDate handleChange={handleChangeDate} getDate={getSearchedDate} text={date}/> 
         </div>
     )
 }
