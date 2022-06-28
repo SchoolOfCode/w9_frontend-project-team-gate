@@ -5,10 +5,8 @@
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.9",
     "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.21.3",
-    "cypress": "^10.2.0",
     "react": "^18.2.0",
     "react-audio-player": "^0.17.0",
     "react-dom": "^18.2.0",
@@ -42,6 +40,7 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/react": "^13.3.0",
     "jest": "^28.1.1"
   }
 }
