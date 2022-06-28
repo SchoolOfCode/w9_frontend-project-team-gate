@@ -1,14 +1,14 @@
 import Title from "./Title/Title";
 import NotesInput from "./AddNoteForm/NotesInput/NotesInput";
-import Style from "./PageThree.module.css";
+import Style from "./NotesPage.module.css";
 import AddNotesButton from "./AddNoteForm/AddNotesButton/AddNotesButton";
 import { useLocation } from "react-router-dom";
-import Note from "../PageTwo/Note/Note.js";
+import Note from "../ResultsPage/Note/Note.js";
 import React from "react";
 import { useState } from "react";
 import AddNoteForm from "./AddNoteForm/AddNoteForm";
 
-export default function PageThree(props) {
+export default function NotesPage(props) {
   const location = useLocation();
   const data = location.state;
   //let navigate = useNavigate();
@@ -19,11 +19,11 @@ export default function PageThree(props) {
   //   let searchedDate = await fetch(`http://localhost:3000/notes/date/${text}`);
   //   let searchResults = await searchedDate.json();
   //   //console.log(searchResults);
-  //   navigate('/PageThree/', {state: searchResults.payload})
+  //   navigate('/NotesPage/', {state: searchResults.payload})
   // }
 
   return (
-    <div className={Style.PageThree}>
+    <div className={Style.NotesPage}>
       <Title />
       {data &&
         data.map((note) => (

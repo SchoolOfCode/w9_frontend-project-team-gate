@@ -1,7 +1,7 @@
 import "./App.css";
-import PageOne from "../PageOne/PageOne.js";
-import PageTwo from "../PageTwo/PageTwo.js";
-import PageThree from "../PageThree/PageThree.js";
+import HomePage from "../HomePage/HomePage.js";
+import ResultsPage from "../ResultsPage/ResultsPage.js";
+import NotesPage from "../NotesPage/NotesPage.js";
 import { Routes, Route } from "react-router-dom";
 import 'antd/dist/antd.less' 
 import Sidebar from "../Sidebar/Sidebar.js";
@@ -18,10 +18,10 @@ function App() {
       </div>
       <div>
           <Routes >
-            <Route path="/" element={<PageOne />} />
-            <Route path="/PageOne" element={<PageOne />} />
-            <Route path="/PageTwo" element={<PageTwo />} />
-            <Route path="/PageThree" element={<PageThree />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/HomePage" element={<HomePage />} />
+            <Route path="/ResultsPage" element={<ResultsPage />} />
+            <Route path="/NotesPage" element={<NotesPage />} />
           </Routes>
       </div>
     </div>

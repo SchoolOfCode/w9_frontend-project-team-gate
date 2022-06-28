@@ -25,7 +25,7 @@ export default function Sidebar (){
         let searchedTopics = await fetch(`http://localhost:3000/notes/topics/${text}`);
         let searchResults = await searchedTopics.json();
         console.log(searchResults);
-        navigate('/PageTwo/', {state: searchResults.payload})
+        navigate('/ResultsPage/', {state: searchResults.payload})
         setText('');
       }
     
@@ -34,7 +34,7 @@ export default function Sidebar (){
         let searchedDate = await fetch(`http://localhost:3000/notes/date/${date}`);
         let searchResults = await searchedDate.json();
         //console.log(searchResults);
-        navigate('/PageThree/', {state: searchResults.payload})
+        navigate('/NotesPage/', {state: searchResults.payload})
         setDate('');
       }
 

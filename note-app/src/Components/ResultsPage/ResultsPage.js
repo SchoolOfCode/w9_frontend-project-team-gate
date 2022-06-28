@@ -1,9 +1,9 @@
 import Title from "./Title/Title";
 import Note from "./Note/Note";
 import { useLocation, useNavigate } from "react-router-dom";
-import Style from "./PageTwo.module.css"
+import Style from "./ResultsPage.module.css"
 
-export default function PageTwo() {
+export default function ResultsPage() {
   const location = useLocation();
   const data = location.state;
   let navigate = useNavigate();
@@ -14,12 +14,12 @@ export default function PageTwo() {
     let searchedDate = await fetch(`http://localhost:3000/notes/date/${text}`);
     let searchResults = await searchedDate.json();
     //console.log(searchResults);
-    navigate('/PageThree/', {state: searchResults.payload})
+    navigate('/NotesPage/', {state: searchResults.payload})
   }
 
   return (
     
-    <div className={Style.PageTwo}>
+    <div className={Style.ResultsPage}>
       <Title />
       {data && data.map((note) => (
         <nav>
