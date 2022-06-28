@@ -3,6 +3,7 @@ import Note from "./Note/Note";
 import { useLocation, useNavigate } from "react-router-dom";
 import Style from "./ResultsPage.module.css"
 
+//This displays the search results for existing notes, when searched by topic 
 export default function ResultsPage() {
   const location = useLocation();
   const data = location.state;

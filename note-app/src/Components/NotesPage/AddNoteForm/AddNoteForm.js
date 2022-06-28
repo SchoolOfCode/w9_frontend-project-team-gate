@@ -4,6 +4,7 @@ import { useState } from "react";
 import TopicInput from "./TopicInput/TopicInput";
 import DateInput from "./DateInput/DateInput";
 
+//Enables notes to be posted to the database
 export default function AddNoteForm() {
   const [text, setText] = useState("");
   const [topic, setTopic] = useState("");
@@ -38,6 +39,7 @@ export default function AddNoteForm() {
     console.log(topic);
   }
 
+//This is displaying the components to add new notes
   return (
     <div>
       <AddNotesButton postNote={postNote} />

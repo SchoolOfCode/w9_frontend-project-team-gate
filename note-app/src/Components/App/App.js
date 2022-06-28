@@ -7,7 +7,7 @@ import 'antd/dist/antd.less'
 import Sidebar from "../Sidebar/Sidebar.js";
 import Style from "./App.module.css"
 
-
+// The routes are linked to each of the pages
 function App() {
   return (
     <div> 
@@ -19,7 +19,6 @@ function App() {
       <div>
           <Routes >
             <Route path="/" element={<HomePage />} />
-            <Route path="/HomePage" element={<HomePage />} />
             <Route path="/ResultsPage" element={<ResultsPage />} />
             <Route path="/NotesPage" element={<NotesPage />} />
           </Routes>

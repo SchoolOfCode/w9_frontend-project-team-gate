@@ -1,5 +1,6 @@
-import Style from "./TopicInput.module.css"
+import Style from "./TopicInput.module.css";
 
+//Enables topic to be added to the new notes
 export default function TopicInput(props) {
   return (
     <div className={Style.TopicInput}>

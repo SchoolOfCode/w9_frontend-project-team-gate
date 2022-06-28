@@ -6,3 +6,4 @@ export default function SearchResults (){
     )
   
 }
+//May be used in the future
