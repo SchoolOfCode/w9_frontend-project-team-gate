@@ -1,6 +1,7 @@
-export default function Title () {
+
+export default function Title ({className}) {
     return (
-        <div>
+        <div className={className} >
             <h1>Geta Note</h1>
         </div>
     )    
