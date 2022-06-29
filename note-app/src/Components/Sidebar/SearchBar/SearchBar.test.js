@@ -1,6 +1,7 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import SearchBar from "./SearchBar.js"
+
 
 it('should test the SearchBar component', () => {
     const getSearchedTopics = jest.fn();
@@ -14,3 +15,19 @@ it('should test the SearchBar component', () => {
     const button = screen.getByRole("button");
     expect(button).toBeInTheDocument();
   })
+
+
+
+test("should call closeRightSection callback", () => {
+  const getAllTopics = jest.fn();
+  const handleChangeTopic = jest.fn();
+
+  render(<SearchBar
+    handleChange={handleChangeTopic}
+    getAllTopics={getAllTopics}
+  />)
+
+  fireEvent.click(screen.getByRole('button'));
+
+  expect(getAllTopics).toHaveBeenCalled();
+});

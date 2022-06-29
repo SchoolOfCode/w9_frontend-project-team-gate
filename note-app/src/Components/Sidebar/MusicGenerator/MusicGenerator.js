@@ -5,7 +5,7 @@ import SchoolOfCodeSong from './SchoolOfCodeSong.mp3';
 //This is an MP3 player for the Javascript song
 export default function MusicGenerator (){
   return (
-    <div className={Style.MusicGenerator}>
+    <div  className={Style.MusicGenerator}>
      
 <ReactAudioPlayer
   className={Style.ReactAudioPlayer}
