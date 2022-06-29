@@ -15,7 +15,9 @@
 
 .HomePage {
     background-image: url("../../Background.svg/Shapes.svg");
-    height: 60vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
     width: 100vw;
     max-width: 100vw;
 }
