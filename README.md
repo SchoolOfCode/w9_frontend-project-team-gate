@@ -29,3 +29,25 @@ Users can search existing notes by topic or by date, and can contribute new note
  - Jest Testing
  - Heroku
  - Express
+
+Colour Scheme:
+
+
+
+
+
+
+
+
+
+
+| Home Page	 | Results Page |
+|--|--|
+| ![enter image description here](https://i.imgur.com/fjY5HAO.png) | ![enter image description here](https://i.imgur.com/4exZJOG.png) | ![enter image description here](https://i.imgur.com/IMN0dXu.png)
+|                **Notes Page**![enter image description here](https://i.imgur.com/fDaRaKx.png) |  **Code Preview**![enter image description here](https://i.imgur.com/IMN0dXu.png)   
+
+
+
+
+
+
