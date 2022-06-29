@@ -1,4 +1,4 @@
-import Title from "../Sidebar/Title/Title.js";
+import Title from "../Title/Title.js";
 import Note from "./Note/Note";
 import { useLocation, useNavigate } from "react-router-dom";
 import Style from "./ResultsPage.module.css";
