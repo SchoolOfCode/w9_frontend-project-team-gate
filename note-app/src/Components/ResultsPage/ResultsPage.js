@@ -1,7 +1,8 @@
-import Title from "./Title/Title";
+import Title from "../Sidebar/Title/Title.js";
 import Note from "./Note/Note";
 import { useLocation, useNavigate } from "react-router-dom";
-import Style from "./ResultsPage.module.css"
+import Style from "./ResultsPage.module.css";
+
 
 //This displays the search results for existing notes, when searched by topic 
 export default function ResultsPage() {
@@ -21,7 +22,7 @@ export default function ResultsPage() {
   return (
     
     <div className={Style.ResultsPage}>
-      <Title />
+      <Title className={Style.ResultsPageTitle}/>
       {data && data.map((note) => (
         <nav>
         <button className={Style.ResultButton} onClick={()=> newDate(note.date)}>Click here to edit {note.date}</button>

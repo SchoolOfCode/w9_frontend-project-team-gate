@@ -32,3 +32,14 @@
     color: #023047;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.ResultsPageTitle {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    text-decoration: underline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: #faf4d3;
+    background-image: url("../../Background.svg/Shapes.svg");
+}
