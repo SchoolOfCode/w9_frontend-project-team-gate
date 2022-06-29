@@ -1,9 +1,9 @@
-import Title from "./Title/Title";
 import Style from "./NotesPage.module.css";
 import { useLocation } from "react-router-dom";
 import Note from "../ResultsPage/Note/Note.js";
 import React from "react";
 import AddNoteForm from "./AddNoteForm/AddNoteForm";
+import Title from "../Title/Title";
 
 //This displays the existing notes and allows new notes to be added
 export default function NotesPage(props) {
@@ -12,7 +12,7 @@ export default function NotesPage(props) {
 
   return (
     <div className={Style.NotesPage}>
-      <Title />
+      <Title className={Style.NotesPageTitle} />
       {data &&
         data.map((note) => (
           <div>
@@ -23,6 +23,7 @@ export default function NotesPage(props) {
                 topics={note.topics}
                 notes={note.notes}
               ></Note>
+              
             </div>
             <AddNoteForm />
           </div>
